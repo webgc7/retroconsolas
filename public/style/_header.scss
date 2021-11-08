@@ -1,0 +1,124 @@
+header {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   background-color: white;
+   border: 1px solid black;
+   box-shadow: 5px 5px 10px gray;
+
+   h1 {
+      text-shadow: 0px 0px 10px $primaryColor;
+      cursor: pointer;
+   }
+
+   img {
+      width: 30px;
+      cursor: pointer;
+   }
+
+   nav {
+      height: 0;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      font-size: 1.7em;
+      opacity: 0;
+      color: black; /* WARNING BLACK MODE */
+
+      /* TRANSFORM */
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: 1s;
+
+      ul {
+         list-style: none;
+         background-color: $quaternaryColor;
+
+         li {
+            padding: 10 0px;
+            cursor: pointer;
+         }
+         li:hover {
+            transition: 1s;
+            background-color: #ff4500;
+         }
+      }
+   }
+
+   input[type="checkbox"] {
+      display: none;
+   }
+
+   #menuCheckbox:checked ~ nav {
+      transition: 1s;
+      opacity: 1;
+      width: 100%;
+      justify-content: start;
+      transform: scaleY(1);
+      height: 410px;
+   }
+
+   /* HAMBURGER ICON */
+
+   .menu span {
+      width: 40px;
+      height: 7px;
+      background: $quaternaryColor;
+      position: relative;
+      display: inline-block;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 1s;
+   }
+
+   .menu span::before {
+      content: "";
+      width: 40px;
+      height: 7px;
+      background: $quaternaryColor;
+      position: absolute;
+      display: inline-block;
+      top: -13px;
+      right: 0;
+      border-radius: 5px;
+      transition: 1s;
+   }
+
+   .menu span::after {
+      content: "";
+      width: 40px;
+      height: 7px;
+      background: $quaternaryColor;
+      position: absolute;
+      display: inline-block;
+      top: 13px;
+      right: 0;
+      border-radius: 5px;
+      transition: 1s;
+   }
+
+   /* END HAMBURGER ICON */
+
+   /* HAMBURGER ICON X */
+
+   #menuCheckbox:checked ~ .menu span {
+      background-color: transparent;
+   }
+
+   #menuCheckbox:checked ~ .menu span::before {
+      top: 0;
+      transform: rotate(-135deg) skew(-45deg);
+      background-color: $quaternaryColor;
+      border-radius: 0px;
+   }
+
+   #menuCheckbox:checked ~ .menu span::after {
+      top: 0;
+      transform: rotate(135deg) skew(45deg);
+      background-color: $quaternaryColor;
+      border-radius: 0px;
+   }
+
+   /* END HAMBURGER ICON X */
+}

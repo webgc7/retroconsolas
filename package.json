@@ -1,0 +1,28 @@
+{
+   "name": "retro-consolas",
+   "version": "1.0.0",
+   "description": "Retro Consolas",
+   "main": "index.html",
+   "scripts": {
+      "start": "sass -w public/style/_index.scss:public/style/index-min.css --style compressed",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/webgc7/retroconsolas.git"
+   },
+   "keywords": [
+      "retro",
+      "consolas",
+      "videojuegos"
+   ],
+   "author": "Gstavo Cabezas (webgc7@gmail.com)",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/webgc7/retroconsolas/issues"
+   },
+   "homepage": "https://github.com/webgc7/retroconsolas",
+   "dependencies": {
+      "sass": "^1.43.4"
+   }
+}

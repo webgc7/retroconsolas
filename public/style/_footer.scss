@@ -1,0 +1,26 @@
+footer {
+   width: 100%;
+   background-color: white;
+   border: 1px solid black;
+
+   ul {
+      display: flex;
+      justify-content: center;
+
+      li {
+         list-style: none;
+         margin: 0 10px;
+
+         img {
+            width: 70px;
+            cursor: pointer;
+         }
+      }
+   }
+
+   p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 3px $primaryColor;
+      margin: 20px 0;
+   }
+}
