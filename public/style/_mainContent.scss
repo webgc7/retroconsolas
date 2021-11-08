@@ -21,10 +21,12 @@
          text-shadow: 1px 1px 3px $primaryColor;
          padding: 10px;
          font-family: "Comic Neue", cursive;
+         font-size: 1.3em;
       }
 
       h3 {
          display: flex;
+         font-size: 1.2em;
          background-color: $tertiaryColor;
          align-items: center;
          justify-content: center;

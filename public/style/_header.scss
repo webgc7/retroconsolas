@@ -9,12 +9,20 @@ header {
 
    h1 {
       text-shadow: 0px 0px 10px $primaryColor;
+      text-align: center;
       cursor: pointer;
+      max-width: 200px;
    }
 
    img {
       width: 30px;
       cursor: pointer;
+   }
+
+   .searchInput {
+      #searchInputText {
+         display: none;
+      }
    }
 
    nav {
@@ -122,3 +130,34 @@ header {
 
    /* END HAMBURGER ICON X */
 }
+
+/* RESPONSIVE */
+@media (min-width: 1080px) {
+   .searchInput {
+      display: flex;
+      align-items: center;
+      border: 1px solid gray;
+      border-radius: 25px;
+      width: 20%;
+      height: 40px;
+
+      #searchInputText {
+         display: block !important;
+         width: 100px;
+         width: 90%;
+         height: 100%;
+         background-color: #e0e0e0;
+         border: 1px solid gray;
+         border-radius: 25px 0 0 25px;
+      }
+
+      img {
+         margin: 15px;
+      }
+   }
+
+   #searchCheckbox {
+      width: 50px;
+   }
+}
+/* END RESPONSIVE */
